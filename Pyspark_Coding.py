@@ -293,3 +293,7 @@ from pyspark.sql.functions import col,desc,percent_rank,avg
 windowspec=Window.partitionBy(col("department")).orderBy(col("salary")).rowsBetween(-2,0)
 
 df=df.withColumn("rank",avg(col("salary")).over(windowspec)).show()
+
+# COMMAND ----------
+
+
